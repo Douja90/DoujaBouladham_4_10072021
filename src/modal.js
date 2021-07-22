@@ -63,17 +63,6 @@ function closeModal() { // close modal form
 } 
 
 
-
-// function editNav() {
-//     var r = document.getElementById("topnav");
-
-//     if (r.className === "topnav") {
-//         r.className += " responsive";
-//     } else {
-//         r.className = "topnav";
-//     }
-// }
-
 /* Form Validator */
 
 // first name validation 
@@ -120,7 +109,7 @@ function validateEmail(email) {
 
 // validation of birth date 
 function validateBirthDate(birthDate) { 
-    if (!/^\d{4}(\-)(((0)[0-9])|((1)[0-2]))(\-)([0-2][0-9]|(3)[0-1])$/g.test(birthDate.value)) {
+    if (!/^\d{4}(\-)(((0)[0-9])|((1)[0-2]))(\-)([0-2][0-9]|(3)[0-1])$/g.test(birthDate.value) & this.birthdate <=0) {
         errorBirthDate.innerText = "Please enter your date of birth.";
         errorBirthDate.style.display = "inline-block";
         birthDate.style.border = "solid #FE142F 3px";
@@ -131,7 +120,9 @@ function validateBirthDate(birthDate) {
         return true;
     }
 }
-function validateEventQuantity(eventQuantity) { // events quantity validation function
+
+// quantity events validation 
+function validateEventQuantity(eventQuantity) { 
     if (!/\d/g.test(eventQuantity.value)) {
         errorEventQuantity.innerText = "Please indicate the number of participants in our tournaments.";
         errorEventQuantity.style.display = "inline-block";
@@ -144,7 +135,8 @@ function validateEventQuantity(eventQuantity) { // events quantity validation fu
     }
 }
 
-function validateEventLocation(eventLocation) { // events location validation function
+// validation  of location 
+function validateEventLocation(eventLocation) { 
     let eventLocationChecked = 0;
 
 
@@ -164,7 +156,8 @@ function validateEventLocation(eventLocation) { // events location validation fu
     };
 }
 
-function validateConditionsOfUse(conditionsOfUse) { // conditions of use validation function
+// conditions of use validation
+function validateConditionsOfUse(conditionsOfUse) { 
     if (!conditionsOfUse.checked) {
         errorConditionsOfUse.innerText = "Please accept the terms and conditions of use.";
         errorConditionsOfUse.style.display = "inline-block";
@@ -178,7 +171,8 @@ function validateConditionsOfUse(conditionsOfUse) { // conditions of use validat
 
 /* Form Validator */
 
-function validate() { // global validation function
+// global validation 
+function validate() { 
     let isFormValidate = [];
 
     isFormValidate.push(validateFirstName(firstName));
@@ -198,13 +192,13 @@ function validate() { // global validation function
 
 /* Send Form */
 
-form.addEventListener("submit", function (e) { // form sending
+form.addEventListener("submit", function (e) {
     e.preventDefault();
     validate();
 });
 
 
-/* Close Validation Message */
+/* Close  Message */
 
-document.querySelector("#btn-closed").addEventListener("click", closeModal); // close validation message
+document.querySelector("#btn-closed").addEventListener("click", closeModal); 
 
