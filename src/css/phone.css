@@ -1,0 +1,175 @@
+@media screen and (max-width: 768px) {
+    .bground {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+    }
+  
+    .modal-main {
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: white;
+        background-color: #232323;
+        border-radius: 0px;
+        animation-name: modalopen;
+        animation-duration: var(--modal-duration);
+    }
+    .close {
+      
+      top: 1rem;
+      right: 1rem;
+      
+    }
+    
+        .topnav {
+            position: relative;
+            padding: 1rem 5vw;
+        }
+      
+        .header-logo img {
+            max-width: 10rem;
+            max-height: 100%;
+        }
+      
+        .topnav a.bar {
+            margin: 0.5rem;
+        }
+      
+        .topnav a.bar {
+            display: none;
+        }
+      
+        .topnav a.icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FE142F;
+            
+            
+        }
+      
+        .topnav a:hover {
+            color: white;
+            background-color: #FE142F;
+            border-radius: 0.5rem;
+        }
+      
+        .topnav a.active {
+            color: white;
+            background-color: #FE142F;
+            border-radius: 0.5rem;
+            
+        }
+      
+        .responsive {
+            overflow: visible;
+        }
+      
+        .responsive .main-navbar {
+            display: flex;
+            flex-direction: column;
+            margin-right: 5vw;
+            padding: 1rem;
+            position: absolute;
+            top: 5.2rem;
+            right: 0px;
+            z-index: 3;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
+      
+        }
+      
+        .responsive a.item {
+            display: flex;
+            z-index: 4;
+        }
+      
+        .responsive a.icon {
+            position: absolute;
+            top: -4rem;
+            right: 0px;
+            
+        }
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: none;
+        }
+      
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            padding: 0px;
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            color: black;
+            background-color: white;
+        }
+      
+        .hero-headline {
+            display: inline-block;
+            margin-bottom: 2rem;
+            height: 100%;
+            font-size: 2.75rem;
+            white-space: normal;
+        }
+      
+        .hero-text {
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+      
+        .hero-content .btn-signup {
+            display: none;
+        }
+      
+        .hero-img {
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+      
+        .hero-img img {
+            border-radius: 0.5rem;
+        }
+      
+        .btn-signup {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2.5rem;
+            font-size: 1.25rem;
+            color: white;
+            background: #FE142F;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        .modal-confirm {
+            padding: 2rem;
+            height: calc(100vh - 4rem);
+        }
+        footer {
+            padding: 0px;
+        }
+        .copyrights {
+            margin: 1rem 0px;
+            text-align: center;
+        }
+      }
+      
+  
