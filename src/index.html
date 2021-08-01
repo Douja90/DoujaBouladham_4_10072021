@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/animation.css" />
     <link rel="stylesheet" href="./css/phone.css" />
+    <link rel="stylesheet" href="./css/firefox.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans"
@@ -59,7 +60,10 @@
     <div class="bground">
         <div class="modal-main">
             <span class="close"></span>
-            <form class="form" name="reserve" action="index.html" method="get" onsubmit="return validate();">
+            <form class="form" name="reserve" 
+            action="index.html" 
+            method="get"
+            onsubmit="return validate();">
                 <!--  Labels & Inputs -->
                 <div class="formData">
                     <label for="first">Prénom</label>
@@ -92,7 +96,7 @@
                 <div class="formData">
                     <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label>
                     <br>
-                    <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="06">
+                    <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="6">
                     <span class="error-input" id="error-eventquantity"></span>
                     <br>
                 </div>
@@ -144,7 +148,7 @@
             </form>
             <!-- Validation Message -->
             <div class="modal-confirm" id="modal-confirm">
-                <p class="msg-confirm" id="msg-confirm">Merci d'avoir soumis vos informations d'inscription</p>
+                <p class="msg-confirm" id="msg-confirm">Merci ! Votre réservation a été reçue.</p>
                 <button class="btn-closed" id="btn-closed">Fermer</button>
             </div>
 
