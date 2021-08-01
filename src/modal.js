@@ -48,15 +48,15 @@ const confirmationValidation = document.querySelector("#modal-confirm");
 
 /* launch and close Modal Form */
 
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal)); // launch modal event
+modalBtn.forEach((btn) => btn.addEventListener("click", launchModal)); 
 
 function launchModal() { // launch modal form
     modalbg.style.display = "flex";
 }
 
-closeModalBtn.addEventListener("click", closeModal); // close modal event
+closeModalBtn.addEventListener("click", closeModal); 
 
-function closeModal() { // close modal form
+function closeModal() { 
     modalbg.style.display = "none";
     form.style.display = "block";
     confirmationValidation.style.display = "none";
@@ -68,7 +68,7 @@ function closeModal() { // close modal form
 // first name validation 
 function validateFirstName(firstName) { 
     if (firstName.value.trim().length < 2) {
-        errorFirstName.innerText = "Please enter at least 2 characters for the First Name field.";
+        errorFirstName.innerText = "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
       
         return false;  errorFirstName.style.display = "inline-block";
         firstName.style.border = "solid #FE142F 3px";
@@ -82,7 +82,7 @@ function validateFirstName(firstName) {
 // last name validation 
 function validateLastName(lastName) { 
     if (lastName.value.trim().length < 2) {
-        errorLastName.innerText = "Please enter at least 2 characters for the Last Name field.";
+        errorLastName.innerText = "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
         errorLastName.style.display = "inline-block";
         lastName.style.border = "solid #FE142F 3px";
         return false;
@@ -96,7 +96,7 @@ function validateLastName(lastName) {
 // email validation
 function validateEmail(email) { 
     if (!/^[\w.-]+@([\w-]+\.)+[\w-]{2,10}$/g.test(email.value)) {
-        errorEmail.innerText = "Please enter a valid email.";
+        errorEmail.innerText = "Veuillez entrer un E-mail valide.";
         errorEmail.style.display = "inline-block";
         email.style.border = "solid #FE142F 2px";
         return false;
@@ -110,7 +110,7 @@ function validateEmail(email) {
 // validation of birth date 
 function validateBirthDate(birthDate) { 
     if (!/^\d{4}(\-)(((0)[0-9])|((1)[0-2]))(\-)([0-2][0-9]|(3)[0-1])$/g.test(birthDate.value) & this.birthdate <=0) {
-        errorBirthDate.innerText = "Please enter your date of birth.";
+        errorBirthDate.innerText = "Veuillez entrer votre date de naissance.";
         errorBirthDate.style.display = "inline-block";
         birthDate.style.border = "solid #FE142F 3px";
         return false;
@@ -124,7 +124,7 @@ function validateBirthDate(birthDate) {
 // quantity events validation 
 function validateEventQuantity(eventQuantity) { 
     if (!/\d/g.test(eventQuantity.value)) {
-        errorEventQuantity.innerText = "Please indicate the number of participants in our tournaments.";
+        errorEventQuantity.innerText = "Veuillez indiquer le nombre de participants à nos tournois.";
         errorEventQuantity.style.display = "inline-block";
         eventQuantity.style.border = "solid #FE142F 2px";
         return false;
@@ -147,7 +147,7 @@ function validateEventLocation(eventLocation) {
     })
 
     if (eventLocationChecked === 0) {
-        errorEventLocation.innerText = "Please select a location.";
+        errorEventLocation.innerText = "Vous devez choisir une option.";
         errorEventLocation.style.display = "inline-block";
         return false;
     } else {
@@ -159,7 +159,7 @@ function validateEventLocation(eventLocation) {
 // conditions of use validation
 function validateConditionsOfUse(conditionsOfUse) { 
     if (!conditionsOfUse.checked) {
-        errorConditionsOfUse.innerText = "Please accept the terms and conditions of use.";
+        errorConditionsOfUse.innerText = "Vous devez vérifier que vous acceptez les termes et conditions.";
         errorConditionsOfUse.style.display = "inline-block";
         return false;
     } else {
@@ -171,7 +171,7 @@ function validateConditionsOfUse(conditionsOfUse) {
 
 /* Form Validator */
 
-// global validation 
+// global validation msg
 function validate() { 
     let isFormValidate = [];
 
@@ -184,8 +184,8 @@ function validate() {
     isFormValidate.push(validateConditionsOfUse(conditionsOfUse));
 
     if (!isFormValidate.includes(false)) {
-        form.style.display = "none"; // remove form
-        confirmationValidation.style.display = "flex"; // show validation message
+        form.style.display = "none"; 
+        confirmationValidation.style.display = "flex"; 
     }
 }
 
