@@ -69,9 +69,9 @@ function closeModal() {
 function validateFirstName(firstName) { 
     if (firstName.value.trim().length < 2) {
         errorFirstName.innerText = "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
-      
-        return false;  errorFirstName.style.display = "inline-block";
+        errorFirstName.style.display = "inline-block";
         firstName.style.border = "solid #FE142F 3px";
+        return false; 
     } else {
         errorFirstName.style.display = "none";
         firstName.style.border = "solid #279E7A 2px";
@@ -109,7 +109,7 @@ function validateEmail(email) {
 
 // validation of birth date 
 function validateBirthDate(birthDate) { 
-    if (!/^\d{4}(\-)(((0)[0-9])|((1)[0-2]))(\-)([0-2][0-9]|(3)[0-1])$/g.test(birthDate.value) & this.birthdate <=0) {
+    if (!/^\d{4}(\-)(((0)[0-9])|((1)[0-2]))(\-)([0-2][0-9]|(3)[0-1])$/g.test(birthDate.value)) {
         errorBirthDate.innerText = "Veuillez entrer votre date de naissance.";
         errorBirthDate.style.display = "inline-block";
         birthDate.style.border = "solid #FE142F 3px";
@@ -173,6 +173,7 @@ function validateConditionsOfUse(conditionsOfUse) {
 
 // global validation msg
 function validate() { 
+    
     let isFormValidate = [];
 
     isFormValidate.push(validateFirstName(firstName));
@@ -186,6 +187,9 @@ function validate() {
     if (!isFormValidate.includes(false)) {
         form.style.display = "none"; 
         confirmationValidation.style.display = "flex"; 
+    }
+    else{
+        document.querySelectorAll("#form").addEventListener("click", closeModal);
     }
 }
 
