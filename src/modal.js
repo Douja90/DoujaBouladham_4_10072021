@@ -9,6 +9,8 @@ function editNav() {
     }
   }
   
+  document.querySelector("#icon").addEventListener("click", editNav); 
+
   // launch modal form
   function launchModal() {
     modalbg.style.display = "block";
@@ -189,7 +191,7 @@ function validate() {
         confirmationValidation.style.display = "flex"; 
     }
     else{
-        document.querySelectorAll("#form").addEventListener("click", closeModal);
+        document.querySelector("#form").addEventListener("click", closeModal);
     }
 }
 
