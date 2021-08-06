@@ -23,7 +23,7 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeModalBtn = document.querySelector(".close");
 const form = document.querySelector(".form");
-console.log(form);
+
 
 
 // elements in the modal
