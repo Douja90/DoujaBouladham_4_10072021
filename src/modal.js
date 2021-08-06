@@ -191,7 +191,7 @@ function validate() {
         confirmationValidation.style.display = "flex"; 
     }
     else{
-        document.querySelector("#form").addEventListener("click", closeModal);
+        document.querySelector("#form").addEventListener("click", validate);
     }
 }
 
@@ -201,6 +201,7 @@ function validate() {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     validate();
+    document.getElementById("form").reset(); 
 });
 
 
