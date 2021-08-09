@@ -201,11 +201,19 @@ function validate() {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     validate();
-    document.getElementById("form").reset(); 
+    document.querySelector("#form").addEventListener("click", resetForm); 
+
 });
+
+function resetForm() {
+    document.getElementById("Form").reset();
+}
+
 
 
 /* Close  Message */
 
 document.querySelector("#btn-closed").addEventListener("click", closeModal); 
+
+
 
