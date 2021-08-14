@@ -11,12 +11,7 @@ function editNav() {
   
   document.querySelector("#icon").addEventListener("click", editNav); 
 
-  // launch modal form
-  function launchModal() {
-    modalbg.style.display = "block";
-  }
-
-/* Elements DOM  */
+  /* Elements DOM  */
 
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
@@ -24,7 +19,10 @@ const formData = document.querySelectorAll(".formData");
 const closeModalBtn = document.querySelector(".close");
 const form = document.querySelector(".form");
 
-
+//   // launch modal form
+//   function launchModal() {
+//     modalbg.style.display = "block";
+//   }
 
 // elements in the modal
 const firstName = document.querySelector("#first");
@@ -52,15 +50,18 @@ const confirmationValidation = document.querySelector("#modal-confirm");
 
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal)); 
 
-function launchModal() { // launch modal form
+// launch modal form
+
+function launchModal() { 
     modalbg.style.display = "flex";
 }
 
+// close modal 
 closeModalBtn.addEventListener("click", closeModal); 
 
 function closeModal() { 
     modalbg.style.display = "none";
-    form.style.display = "block";
+    // form.style.display = "block";
     confirmationValidation.style.display = "none";
 } 
 
@@ -174,6 +175,7 @@ function validateConditionsOfUse(conditionsOfUse) {
 /* Form Validator */
 
 // global validation msg
+
 function validate() { 
     
     let isFormValidate = [];
@@ -201,14 +203,12 @@ function validate() {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     validate();
-    document.querySelector("#form").addEventListener("click", resetForm); 
 
 });
 
-function resetForm() {
-    document.getElementById("Form").reset();
-}
-
+// function resetForm() {
+//     document.getElementById("Form").reset();
+// }
 
 
 /* Close  Message */
